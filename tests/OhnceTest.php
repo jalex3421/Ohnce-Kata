@@ -14,17 +14,38 @@ class OhnceTest extends TestCase{
     protected function setUp():void{
         parent::setUp();
         //initial name of user !!
-        $this->Ohnce=  new Ohnce("Alejandro");
+        $sessionManager = new FakeSessionManager();
+        $this->Ohnce=  new Ohnce("Alejandro",$sessionManager);
     }
 
     /**
      * @test
      */
-    public function helloOhce(){
+    public function helloMorningOhce(){
 
         $response = $this->Ohnce->executeOhnce("ohnce");
 
         $this->assertEquals("¡Buenos días Alejandro!",$response);
+    }
+
+    /**
+     * @test
+     */
+    public function helloEveningOhce(){
+
+        $response = $this->Ohnce->executeOhnce("ohnce");
+
+        $this->assertEquals("¡Buenos tardes Alejandro!",$response);
+    }
+
+    /**
+     * @test
+     */
+    public function helloNghtOhce(){
+
+        $response = $this->Ohnce->executeOhnce("ohnce");
+
+        $this->assertEquals("¡Buenas noches Alejandro!",$response);
     }
 
     /**
@@ -56,6 +77,9 @@ class OhnceTest extends TestCase{
 
         $this->assertEquals("¡Bonita palabra!",$response);
     }
+
+
+
 
 
 
