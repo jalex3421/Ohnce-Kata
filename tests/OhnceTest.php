@@ -41,7 +41,7 @@ class OhnceTest extends TestCase{
     /**
      * @test
      */
-    public function helloNghtOhce(){
+    public function helloNightOhce(){
 
         $response = $this->Ohnce->executeOhnce("ohnce");
 
