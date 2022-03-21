@@ -11,18 +11,18 @@ class OhnceTest extends TestCase{
     /**
      * @setUp
      */
-    protected function setUp():void{
+    protected function setUp():void
+    {
         parent::setUp();
-        //initial name of user !!
-        $sessionManager = new FakeSessionManager();
+        $sessionManager = new FakeTimeManager();
         $this->Ohnce=  new Ohnce("Alejandro",$sessionManager);
     }
 
     /**
      * @test
      */
-    public function helloMorningOhce(){
-
+    public function helloMorningOhce()
+    {
         $response = $this->Ohnce->executeOhnce("ohnce");
 
         $this->assertEquals("¡Buenos días Alejandro!",$response);
@@ -31,8 +31,8 @@ class OhnceTest extends TestCase{
     /**
      * @test
      */
-    public function helloEveningOhce(){
-
+    public function helloEveningOhce()
+    {
         $response = $this->Ohnce->executeOhnce("ohnce");
 
         $this->assertEquals("¡Buenos tardes Alejandro!",$response);
@@ -41,8 +41,8 @@ class OhnceTest extends TestCase{
     /**
      * @test
      */
-    public function helloNightOhce(){
-
+    public function helloNightOhce()
+    {
         $response = $this->Ohnce->executeOhnce("ohnce");
 
         $this->assertEquals("¡Buenas noches Alejandro!",$response);
@@ -51,8 +51,8 @@ class OhnceTest extends TestCase{
     /**
      * @test
      */
-    public function reverseWord(){
-
+    public function reversesWord()
+    {
         $response =$this->Ohnce->executeOhnce("hola");
 
         $this->assertEquals("aloh",$response);
@@ -61,8 +61,8 @@ class OhnceTest extends TestCase{
     /**
      * @test
      */
-    public function stopOhnce(){
-
+    public function stopsOnOhnce()
+    {
         $response = $this->Ohnce->executeOhnce("Stop!");
 
         $this->assertEquals("¡Adios Alejandro!",$response);
@@ -71,16 +71,11 @@ class OhnceTest extends TestCase{
     /**
      * @test
      */
-    public function isPalindrome(){
-
+    public function isPalindrome()
+    {
         $response = $this->Ohnce->executeOhnce("oto");
 
         $this->assertEquals("¡Bonita palabra!",$response);
     }
-
-
-
-
-
 
 }
