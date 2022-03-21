@@ -23,7 +23,7 @@ class OhnceTest extends TestCase{
      */
     public function helloMorningOhce()
     {
-        $response = $this->Ohnce->executeOhnce("ohnce");
+        $response = $this->Ohnce->execute("ohnce");
 
         $this->assertEquals("¡Buenos días Alejandro!",$response);
     }
@@ -33,7 +33,7 @@ class OhnceTest extends TestCase{
      */
     public function helloEveningOhce()
     {
-        $response = $this->Ohnce->executeOhnce("ohnce");
+        $response = $this->Ohnce->execute("ohnce");
 
         $this->assertEquals("¡Buenos tardes Alejandro!",$response);
     }
@@ -43,7 +43,7 @@ class OhnceTest extends TestCase{
      */
     public function helloNightOhce()
     {
-        $response = $this->Ohnce->executeOhnce("ohnce");
+        $response = $this->Ohnce->execute("ohnce");
 
         $this->assertEquals("¡Buenas noches Alejandro!",$response);
     }
@@ -53,7 +53,7 @@ class OhnceTest extends TestCase{
      */
     public function reversesWord()
     {
-        $response =$this->Ohnce->executeOhnce("hola");
+        $response =$this->Ohnce->execute("hola");
 
         $this->assertEquals("aloh",$response);
     }
@@ -63,7 +63,7 @@ class OhnceTest extends TestCase{
      */
     public function stopsOnOhnce()
     {
-        $response = $this->Ohnce->executeOhnce("Stop!");
+        $response = $this->Ohnce->execute("Stop!");
 
         $this->assertEquals("¡Adios Alejandro!",$response);
     }
@@ -73,7 +73,7 @@ class OhnceTest extends TestCase{
      */
     public function isPalindrome()
     {
-        $response = $this->Ohnce->executeOhnce("oto");
+        $response = $this->Ohnce->execute("oto");
 
         $this->assertEquals("¡Bonita palabra!",$response);
     }

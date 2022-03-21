@@ -20,7 +20,7 @@ class Ohnce
         $this->sessionManager = $sessionManager;
     }
 
-    public function executeOhnce(String $initialWord):String
+    public function execute(String $initialWord):String
     {
         if($initialWord === 'ohnce'){
             return $this->sessionManager->getGreetingBasedOnTheHour(date('H'),$this->name);
