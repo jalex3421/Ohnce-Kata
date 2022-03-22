@@ -79,7 +79,7 @@ class OhceTest extends TestCase{
     {
         $response = $this->Ohnce->execute("oto");
 
-        $this->assertEquals("¡Bonita palabraa!",$response);
+        $this->assertEquals("¡Bonita palabra!",$response);
     }
 
 }
