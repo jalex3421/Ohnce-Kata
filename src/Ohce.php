@@ -6,7 +6,7 @@ namespace Deg540\PHPTestingBoilerplate;
 use Cassandra\Date;
 use Deg540\PHPTestingBoilerplate\TimeManager;
 
-class Ohnce
+class Ohce
 {
     /*
      * Debería tener aquí los mensajes!! Y los arrays con tiempo
