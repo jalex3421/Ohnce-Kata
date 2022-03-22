@@ -2,3 +2,4 @@ grumphp:
   tasks:
     phpunit:
     phplint:
+    phpmd:
