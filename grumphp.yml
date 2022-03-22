@@ -1,4 +1,3 @@
-# grumphp.yml
 grumphp:
   tasks:
     phpunit:
