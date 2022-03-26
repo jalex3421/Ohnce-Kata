@@ -3,3 +3,8 @@ grumphp:
     phpunit:
     phplint:
     phpmd:
+        whitelist_patterns: [ ]
+        exclude: [ ]
+        report_format: text
+        ruleset: [ 'cleancode', 'codesize', 'naming' ]
+        triggered_by: [ 'php' ]
