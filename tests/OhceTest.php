@@ -78,6 +78,11 @@ class OhceTest extends TestCase{
     public function ispalindrome()
     {
         $response = $this->Ohnce->execute("oto");
+
+
+
+
+
         $this->assertEquals("¡Bonita palabra!",$response);
     }
 
